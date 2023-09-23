@@ -1,0 +1,76 @@
+.input_area{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    background-color: rgb(181, 150, 227);
+    flex-direction: column;
+    width: 40%;
+    height: 20%;
+    padding: 20px;
+    gap: 0.5rem;
+    border-radius: 10px;
+    margin: 10px auto 0 auto;
+}
+
+/* .parentInput{
+    /* margin-top: 10px; */
+    /* width: 40%; */
+    /* margin: 10px auto 0 auto; */
+
+.title{
+    display: flex;
+    /* flex:1; */
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.title label p{
+    margin:0;
+    font-weight: bold;
+}
+.title input{
+    border: 0;
+    padding: 0;
+    border-radius: 5px;
+    flex:1;
+    /* width: 60%; */
+}
+
+
+.description{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.descrip_lab p{
+    margin:0;
+    font-weight: bold;
+    flex: 1;
+}
+
+textarea{
+    border: 0;
+    padding: 0;
+    border-radius: 5px;
+    flex:1;
+    /* outline: none; */
+    border: none;
+}
+
+
+
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    /* border-radius: 5px; */
+}
+.btn button{
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    textarea {
+      flex : none;
+    }
+  }

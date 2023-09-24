@@ -1,0 +1,23 @@
+.parentcard{
+    width: 200px;
+    height: 150px;
+    background-color: green;
+    border-radius: 0.5rem;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+.parentcard h1{
+    /* flex: 1; */
+    margin: 0;
+}
+.parentcard p{
+    flex: 1;
+    margin: 0;
+}

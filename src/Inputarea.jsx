@@ -1,21 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./CSS/inputarea.css"
 
-function Inputarea() {
+
+
+function Inputarea(props) {
+
+
+  const [word,setWord] = useState({title:"",descrip:""})
+  
+  const onTitleChng=(e)=>{
+    let newval = e.target.value
+    setWord(prev=>{
+      return {...prev,title:newval}
+    })
+  }
+  const onDescripChng=(e)=>{
+    let newval = e.target.value
+    setWord(prev=>{
+      return {...prev,descrip:newval}
+    })
+  }
+
+  const passWord=(e)=>{
+    props.add(word,e)
+    setWord({title:"",descrip:""})
+  }
+
+
   return (
-    <div class="parentInput">
-        <form class="input_area" action="">
-          <div class="title">
-            <label class="title_lab"><p>Title</p></label>
-            <input type="text"></input>
+    <div className="parentInput">
+        <form className="input_area" action="">
+          <div className="title">
+            <label className="title_lab"><p>Title</p></label>
+            <input type="text" value={word.title} onChange={onTitleChng}></input>
           </div>
-          <div class="description">
-            <label class="descrip_lab"><p>Description</p></label>
-            <textarea name="decription" id="descrip" rows="4"></textarea>
+          <div className="description">
+            <label className="descrip_lab"><p>Description</p></label>
+            <textarea name="decription" id="descrip" rows="4" value={word.descrip} onChange={onDescripChng}></textarea>
           </div>
-          <div class="btn">
-            <button>ADD</button>
-            <button>DEL</button>
+          <div className="btn">
+            <button onClick={passWord}>ADD</button>
           </div>
         </form>
     </div>
@@ -23,3 +47,6 @@ function Inputarea() {
 }
 
 export default Inputarea
+
+
+

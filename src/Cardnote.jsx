@@ -12,7 +12,7 @@ function Cardnote(props) {
     <div className="parentcard">
         <h1>{props.title} </h1>
         <p>{props.description}</p>
-        <button onClick={removeWord}>DEL</button>
+        <button class="note_btn"onClick={removeWord}>DEL</button>
     </div>
   )
 }
